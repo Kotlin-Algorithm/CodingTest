@@ -26,14 +26,12 @@ fun bfs(p1: Int, p2: Int, arr: Array<MutableList<Int>>, n: Int): Int {
 }
 
 fun main() {
-    //만약 아예 연관없는 촌수라면? -1 출력
     val scanner = Scanner(System.`in`)
     val n = scanner.nextInt()
     val p1 = scanner.nextInt()
     val p2 = scanner.nextInt()
     val relationCount = scanner.nextInt()
     val relationArray = Array(n + 1) { mutableListOf<Int>() } //사촌 배열
-    //IntArray는 1차원 배열만 생성 가능하다. 그래서 처음에 감쌀때는 Array로 감싸줘야한다.
 
     repeat(relationCount) {
         val a1 = scanner.nextInt()
