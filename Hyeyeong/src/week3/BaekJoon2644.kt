@@ -31,7 +31,7 @@ fun main() {
     val p1 = scanner.nextInt()
     val p2 = scanner.nextInt()
     val relationCount = scanner.nextInt()
-    val relationArray = Array(n + 1) { mutableListOf<Int>() } //사촌 배열
+    val relationArray = Array(n + 1) { mutableListOf<Int>() }
 
     repeat(relationCount) {
         val a1 = scanner.nextInt()
