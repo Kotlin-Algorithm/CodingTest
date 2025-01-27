@@ -1,18 +1,15 @@
 import java.util.*;
 
-public class Programmers1844 {
-    static final int START_X = 0;
-    static final int START_Y = 0;
-    static int[] dx = {1, -1, 0, 0};
-    static int[] dy = {0, 0, 1, -1};
+class Programmers1844 {
+    int[] dx = {1, -1, 0, 0};
+    int[] dy = {0, 0, 1, -1};
 
     public int solution(int[][] maps) {
-
         int row = maps.length;
         int column = maps[0].length;
 
         Queue<Node> queue = new LinkedList<>();
-        queue.offer(new Node(START_X, START_Y));
+        queue.offer(new Node(0, 0));
 
         while (!queue.isEmpty()) {
             Node cur = queue.poll();
@@ -26,15 +23,13 @@ public class Programmers1844 {
                 queue.offer(new Node(nx, ny));
                 maps[nx][ny] = maps[cur.x][cur.y] + 1;
             }
-
         }
-        return maps[row-1][column-1] == 1 ? -1 : maps[row-1][column-1];
+        return maps[row - 1][column - 1] == 1 ? -1 : maps[row - 1][column - 1];
     }
 }
 
 class Node {
-    int x;
-    int y;
+    int x, y;
 
     public Node(int x, int y) {
         this.x = x;
