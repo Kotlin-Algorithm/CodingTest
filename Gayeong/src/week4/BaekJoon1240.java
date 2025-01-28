@@ -1,9 +1,11 @@
+package BFS;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Scanner;
 
 public class BaekJoon1240 {
+
     static int n;
     static int m;
     static ArrayList<Edge>[] graph;
@@ -47,18 +49,18 @@ public class BaekJoon1240 {
     static int  bfs(int start, int end) {
         Queue<Edge> queue = new LinkedList<>();
         queue.offer(new Edge(start, 0));
-        boolean[] visited = new boolean[n + 1];
-        visited[start] = true;
+        int[] visited = new int[n + 1];
+        visited[start] = 0;
 
         while (!queue.isEmpty()) {
             Edge cur = queue.poll();
 
-            if (cur.v == end) return cur.weight;
+            if (cur.v == end) return visited[cur.v];
 
             for (Edge edge : graph[cur.v]) {
-                if (!visited[edge.v]) {
-                    visited[edge.v] = true;
-                    queue.offer(new Edge(edge.v, cur.weight + edge.weight));
+                if (visited[edge.v] == 0) {
+                    visited[edge.v] = edge.weight + visited[cur.v];
+                    queue.offer(edge);
                 }
             }
         }
