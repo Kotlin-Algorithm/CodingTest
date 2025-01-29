@@ -4,42 +4,40 @@ import java.util.*
 
 fun main() {
     val (N, M) = readln().split(" ").map { it.toInt() }
-    val matrix = Array(N + 1) { Array(N + 1) { 0 } }
-    val adj = Array(N + 1) { mutableListOf<Int>() }
-    val stack = Stack<Int>()
+    val pQueue: Queue<Pair<Int, Int>> = PriorityQueue(compareBy { it.first }) // 거리, 정점
+    val distanceMatrix = Array(N + 1) { Array(N + 1) { 0 } }
+    val adjMatrix = Array(N + 1) { mutableListOf<Int>() }
 
     repeat(N-1) {
-        val line = readln().split(" ").map { it.toInt() }
-        val start = line[0]
-        val end = line[1]
-        val distance = line[2]
+        val (start, end, distance) = readln().split(" ").map { it.toInt() }
 
-        adj[start].add(end)
-        adj[end].add(start)
+        adjMatrix[start].add(end)
+        adjMatrix[end].add(start)
 
-        matrix[start][end] = distance
-        matrix[end][start] = distance
+        distanceMatrix[start][end] = distance
+        distanceMatrix[end][start] = distance
     }
 
     repeat(M) {
-        val visited = mutableListOf<Int>()
-        var distance = 0
-        var prev = 0
+        val distances = Array(N + 1) { Integer.MAX_VALUE }
         val (start, end) = readln().split(" ").map { it.toInt() }
+        distances[start] = 0
+        pQueue.add(0 to start)
 
-        visited.add(start)
-        stack.push(start)
+        while (pQueue.isNotEmpty()) {
+            val poll = pQueue.poll()
+            val distance = poll.first
+            val current = poll.second
 
-        while(stack.isNotEmpty()) {
-            val current = stack.pop()
-            val nextList = adj[current]
-            visited.add(current)
+            if (distances[current] != distance) continue
+            for (next in adjMatrix[current]) {
+                if (distances[next] < distances[current] + distanceMatrix[current][next]) continue
 
-            for (next in nextList) {
-                if (next in visited) continue
-                stack.push(next)
+                distances[next] = distances[current] + distanceMatrix[current][next]
+                pQueue.add(distances[next] to next)
             }
-            prev = current
         }
+
+        println(distances[end])
     }
 }
