@@ -6,8 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="282a316e-9bac-4dfc-8f55-2940aeb0fd09" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/week4/GameMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/week4/GameMap.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,8 +17,8 @@
       <list>
         <option value="module-info" />
         <option value="Kotlin File" />
-        <option value="Kotlin Class" />
         <option value="Class" />
+        <option value="Kotlin Class" />
       </list>
     </option>
   </component>
@@ -110,7 +108,7 @@
       <workItem from="1737386198433" duration="774000" />
       <workItem from="1737388243079" duration="23544000" />
       <workItem from="1738169689192" duration="2512000" />
-      <workItem from="1738306650868" duration="4235000" />
+      <workItem from="1738306650868" duration="8347000" />
     </task>
     <servers />
   </component>
