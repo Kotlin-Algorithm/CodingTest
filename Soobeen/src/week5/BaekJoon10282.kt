@@ -3,31 +3,34 @@ package week5
 import java.util.*
 
 fun main() {
-    val n = readln().toInt()
+    val input = System.`in`.bufferedReader()
+    val n = input.readLine().toInt()
 
     repeat(n) {
-        val (computerCount, d, c) = readln().split(" ").map { it.toInt() }
-        val adj = Array(computerCount + 1) { mutableListOf<Pair<Int, Int>>() }  // start, end, cost
-        val pQueue: Queue<Pair<Int, Int>> = PriorityQueue(compareBy { it.first })
+        val (computerCount, d, c) = input.readLine().split(" ").map { it.toInt() }
+        val adj = Array(computerCount + 1) { mutableListOf<IntArray>() }  // start, end, cost
+        val pQueue: Queue<IntArray> = PriorityQueue(compareBy { it[1] })
         val distance = IntArray(computerCount + 1) { Int.MAX_VALUE } // Array -> IntArray
 
         repeat(d) {
-            val (start, end, cost) = readln().split(" ").map { it.toInt() }
-            adj[end].add(start to cost)
+            val (start, end, cost) = input.readLine().split(" ").map { it.toInt() }
+            adj[end].add(intArrayOf(start, cost))
         }
 
-        pQueue.add(c to 0)
+        pQueue.add(intArrayOf(c, 0))
         distance[c] = 0
 
         while (pQueue.isNotEmpty()) {
             val (current, cost) = pQueue.poll()
             if (distance[current] != cost) continue
 
-            for ((next, nextCost) in adj[current]) {
+            for (pair in adj[current]) {
+                val next = pair[0]
+                val nextCost = pair[1]
                 if (distance[next] <= distance[current] + nextCost) continue
 
                 distance[next] = distance[current] + nextCost
-                pQueue.add(next to distance[next])
+                pQueue.add(intArrayOf(next, distance[next]))
             }
         }
 
