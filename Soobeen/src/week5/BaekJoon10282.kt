@@ -7,16 +7,16 @@ fun main() {
 
     repeat(n) {
         val (computerCount, d, c) = readln().split(" ").map { it.toInt() }
-        val adj = Array(computerCount + 1) { mutableListOf<IntArray>() }  // start, end, cost
-        val pQueue: Queue<IntArray> = PriorityQueue(compareBy { it[1] })
+        val adj = Array(computerCount + 1) { mutableListOf<Pair<Int, Int>>() }  // start, end, cost
+        val pQueue: Queue<Pair<Int, Int>> = PriorityQueue(compareBy { it.first })
         val distance = IntArray(computerCount + 1) { Int.MAX_VALUE } // Array -> IntArray
 
         repeat(d) {
             val (start, end, cost) = readln().split(" ").map { it.toInt() }
-            adj[end].add(intArrayOf(start, cost))
+            adj[end].add(start to cost)
         }
 
-        pQueue.add(intArrayOf(c, 0))
+        pQueue.add(c to 0)
         distance[c] = 0
 
         while (pQueue.isNotEmpty()) {
@@ -27,7 +27,7 @@ fun main() {
                 if (distance[next] <= distance[current] + nextCost) continue
 
                 distance[next] = distance[current] + nextCost
-                pQueue.add(intArrayOf(next, distance[next]))
+                pQueue.add(next to distance[next])
             }
         }
 
