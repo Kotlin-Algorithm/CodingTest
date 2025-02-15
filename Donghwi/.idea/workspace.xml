@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="282a316e-9bac-4dfc-8f55-2940aeb0fd09" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,8 +18,8 @@
       <list>
         <option value="module-info" />
         <option value="Kotlin File" />
-        <option value="Kotlin Class" />
         <option value="Class" />
+        <option value="Kotlin Class" />
       </list>
     </option>
   </component>
@@ -45,12 +46,13 @@
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/dongxxi/Downloads/cote/Donghwi&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/dongcci/Downloads/Study/Algorithm/Sadang/Donghwi&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -59,7 +61,7 @@
       <recent name="$PROJECT_DIR$/src/week3" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.B1916">
+  <component name="RunManager" selected="Kotlin.MainKt">
     <configuration name="B10914Java" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="week3.B10914Java" />
       <module name="Donghwi" />
@@ -95,8 +97,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.B1916" />
         <item itemvalue="Kotlin.MainKt" />
+        <item itemvalue="Application.B1916" />
         <item itemvalue="Application.B10914Java" />
       </list>
     </recent_temporary>
@@ -104,8 +106,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9823dce3aa75-fdfe4dae3a2d-intellij.indexing.shared.core-IU-243.22562.218" />
-        <option value="bundled-js-predefined-d6986cc7102b-deb605915726-JavaScript-IU-243.22562.218" />
+        <option value="bundled-jdk-9823dce3aa75-125ca727e0f0-intellij.indexing.shared.core-IU-243.24978.46" />
+        <option value="bundled-js-predefined-d6986cc7102b-76f8388c3a79-JavaScript-IU-243.24978.46" />
       </set>
     </attachedChunks>
   </component>
@@ -128,6 +130,9 @@
       <workItem from="1738678682937" duration="2746000" />
       <workItem from="1738761008853" duration="923000" />
       <workItem from="1738920581186" duration="981000" />
+      <workItem from="1739452451320" duration="60000" />
+      <workItem from="1739452514716" duration="1094000" />
+      <workItem from="1739537058310" duration="3927000" />
     </task>
     <servers />
   </component>
