@@ -18,7 +18,7 @@ public class BaekJoon1940 {
             if (sum == M) {
                 count++;
                 left++;
-                right++;
+                right--;
             } else if (sum < M) {
                 left++;
             } else {
