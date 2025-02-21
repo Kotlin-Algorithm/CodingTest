@@ -18,8 +18,8 @@
       <list>
         <option value="module-info" />
         <option value="Kotlin File" />
-        <option value="Class" />
         <option value="Kotlin Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -133,6 +133,9 @@
       <workItem from="1739452451320" duration="60000" />
       <workItem from="1739452514716" duration="1094000" />
       <workItem from="1739537058310" duration="3927000" />
+      <workItem from="1739581968615" duration="1942000" />
+      <workItem from="1739684764247" duration="9000" />
+      <workItem from="1739791852004" duration="2794000" />
     </task>
     <servers />
   </component>
